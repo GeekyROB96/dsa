@@ -18,7 +18,7 @@ class Solution{
     }
     public static Node root = new Node();   
 
-    public static void insert(String word){
+    public static void insert(String word){  ///Tc - O(l)
 
         Node curr = root;
         for(int level =0;level<word.length();level++){
@@ -33,6 +33,20 @@ class Solution{
         curr.eow = true;
     }
    
+
+    public static boolean search(String key){
+        Node curr = root;
+        for(int level =0;level<key.length();level++){
+            int idx = key.charAt(level) - 'a';
+
+            if(curr == null){
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+
+        return curr.eow == true;
+    } 
 
     public static void main(String[] args) {
         String words[]  ={"the","a","there","any","thee"};
