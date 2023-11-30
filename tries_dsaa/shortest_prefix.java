@@ -1,4 +1,4 @@
-
+//pack
 
 /*
  * Given an array of words, find all shortest unique prefixes to represent each word in the given array. Assume that no word is prefix of another.
@@ -12,7 +12,7 @@ Output: z dog du dov
  */
 
 
- 
+
 class Node {
     Node[] children = new Node[26];
     boolean eow = false;
