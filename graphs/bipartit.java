@@ -5,6 +5,9 @@ Given an adjacency list of a graph adj  of V no. of vertices having 0 based inde
 
 */
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 class Solution {
     public boolean isBipartite(int V, ArrayList<ArrayList<Integer>> adj) {
