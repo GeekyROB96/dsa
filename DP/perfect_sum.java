@@ -60,17 +60,26 @@ class Solution{
 
 
 
-    private static final int MOD = 1000000007;
-
+ 
+    public void printDP(int[][] dp, int n, int sum) {
+        System.out.println("Dynamic Programming Table:");
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= sum; j++) {
+                System.out.print(dp[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    
     public int perfectSum1(int arr[], int n, int sum) {
         // Initializing the dp table
         int[][] dp = new int[n + 1][sum + 1];
-
+    
         // Base case: There is one way to get a sum of 0, i.e., by choosing an empty subset
         for (int i = 0; i <= n; i++) {
             dp[i][0] = 1;
         }
-
+    
         // Filling up the dp table
         for (int i = 1; i <= n; i++) {
             for (int j = 0; j <= sum; j++) {
@@ -83,8 +92,12 @@ class Solution{
                 }
             }
         }
-
+    
+        // Print the dp table
+        printDP(dp, n, sum);
+    
         // Returning the result
         return dp[n][sum];
     }
+    
 }   
