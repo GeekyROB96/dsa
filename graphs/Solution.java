@@ -36,7 +36,7 @@ class Solution {
 
  
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        box_stack solution = new box_stack();
 
         int[][] matrix = {
             {0, 3, -1, 5},
